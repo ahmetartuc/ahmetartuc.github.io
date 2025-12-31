@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Page Not Found | Ahmet Artuç</title>
+  <meta name="description" content="Page not found - Ahmet Artuç" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .error-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .error-code {
+      font-size: 120px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(135deg, var(--accent), rgba(120,255,214,0.8));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .error-message {
+      font-size: 24px;
+      margin: 20px 0;
+      color: var(--text);
+    }
+    .error-description {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+    .error-button {
+      display: inline-block;
+      padding: 12px 32px;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .error-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(122,162,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <h1 class="error-code">404</h1>
+    <p class="error-message">Page Not Found</p>
+    <p class="error-description">
+      The page you're looking for doesn't exist or has been moved. 
+      Let's get you back on track.
+    </p>
+    <a href="/" class="error-button">Back to Home</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="muted">© <span id="y"></span> Ahmet Artuç</div>
+        <div class="muted" style="text-align: center;">All rights reserved</div>
+        <a class="link" href="/">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
