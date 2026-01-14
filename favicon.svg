@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff9c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00c2ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" fill="#0b0f14" rx="12"/>
+  
+  <!-- Terminal prompt > -->
+  <path d="M 18 24 L 32 32 L 18 40" 
+        fill="none" 
+        stroke="url(#grad)" 
+        stroke-width="4" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+  
+  <!-- Terminal underscore _ -->
+  <line x1="36" y1="40" x2="50" y2="40" 
+        stroke="url(#grad)" 
+        stroke-width="4" 
+        stroke-linecap="round"
+        filter="url(#glow)"/>
+</svg>
