@@ -83,8 +83,9 @@ img{max-width:100%;display:block}
 .spot{position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:radial-gradient(420px circle at var(--mx,30%) var(--my,40%), rgba(229,56,59,.10), transparent 60%)}
 h1{margin:0;font-weight:800;line-height:.86;letter-spacing:-.01em;font-size:clamp(4.2rem,21vw,10.5rem);font-variation-settings:"wdth" 62}
-h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
-h1 .line span{display:block;transform:translateY(105%);animation:rise .9s var(--ease) forwards}
+h1 .line{display:block;overflow:hidden;padding-bottom:.12em}
+h1 .line:not(:last-child){margin-bottom:-.08em}
+h1 .line span{display:block;transform:translateY(118%);animation:rise .9s var(--ease) forwards}
 h1 .line:nth-child(2) span{animation-delay:.12s}
 @keyframes rise{to{transform:none}}
 .hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem 2rem;margin-top:2.25rem}
