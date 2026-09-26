@@ -1,465 +1,370 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Ahmet Artuç | Blog</title>
-  <meta name="description" content="Ahmet Artuç - Offensive Security Professional & Security Researcher. OSCP, OSWP. CVE-2025-61035." />
-  <meta name="keywords" content="Ahmet Artuç, Offensive Security, OSCP, OSWP, Penetration Testing, Security Researcher, CVE, Cybersecurity, Ethical Hacking" />
-  <meta name="author" content="Ahmet Artuç" />
-  
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ahmetartuc.github.io/" />
-  <meta property="og:title" content="Ahmet Artuç | Offensive Security Professional" />
-  <meta property="og:description" content="Offensive Security Professional & Security Researcher. OSCP, OSWP certified. Published CVE-2025-61035. Recognized by WHO and leading universities." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmet Artuç | Offensive Security Professional</title>
+<meta name="description" content="Ahmet Artuç - Offensive Security Professional & Security Researcher. OSCP, OSWP, OSWE. Four published CVEs.">
+<meta name="author" content="Ahmet Artuç">
+<meta name="keywords" content="Ahmet Artuç, Offensive Security, OSCP, OSWP, OSWE, Penetration Testing, Security Researcher, CVE, Cybersecurity">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ahmetartuc.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ahmetartuc.github.io/">
+<meta property="og:title" content="Ahmet Artuç | Offensive Security Professional">
+<meta property="og:description" content="Offensive Security Professional & Security Researcher. OSCP, OSWP, OSWE certified. Four published CVEs. Recognized by Apple, Microsoft, WHO and leading universities.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@1ahmetartuc">
+<meta name="twitter:title" content="Ahmet Artuç | Offensive Security Professional">
+<meta name="twitter:description" content="Offensive Security Professional & Security Researcher. OSCP, OSWP, OSWE certified. Four published CVEs.">
+<meta name="theme-color" content="#0a0a0b">
+<meta property="og:site_name" content="Ahmet Artuç">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ahmetartuc.github.io/assets/og/default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ahmet Artuç — Offensive Security Professional & Security Researcher">
+<meta name="twitter:url" content="https://ahmetartuc.github.io/">
+<meta name="twitter:creator" content="@1ahmetartuc">
+<meta name="twitter:image" content="https://ahmetartuc.github.io/assets/og/default.png">
+<meta name="twitter:image:alt" content="Ahmet Artuç — Offensive Security Professional & Security Researcher">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg2:#141416; --bg3:#1c1c1f; --line:#2a2a2e;
+  --ink:#f4f1f1; --muted:#a39e9e; --amber:#e5383b; --amber-ink:#ffffff;
+  --font:"Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  box-sizing:border-box;
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.25rem)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.6;font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:48rem){.wrap{padding:0 2.25rem}}
 
-  
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://ahmetartuc.github.io/" />
-  <meta name="twitter:title" content="Ahmet Artuç | Offensive Security Professional" />
-  <meta name="twitter:description" content="Offensive Security Professional & Security Researcher. OSCP, OSWP certified. Published CVE-2025-61035." />
+/* Scroll progress */
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:100%;background:var(--amber);transform-origin:0 50%;transform:scaleX(0);z-index:20}
 
-  <meta name="twitter:site" content="@1ahmetartuc" />
-  <meta name="twitter:creator" content="@1ahmetartuc" />
-  
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
-  <link rel="canonical" href="https://ahmetartuc.github.io/" />
-  
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  
-  <meta name="theme-color" content="#0b0f14" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <link rel="apple-touch-icon" href="/favicon-64x64.png" />
-  
-  <link rel="stylesheet" href="/assets/css/style.css" />
+/* Sticky nav with scroll-spy */
+.nav{position:sticky;top:0;z-index:10;padding-top:env(safe-area-inset-top,0px);
+  background:color-mix(in srgb, var(--bg) 82%, transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:1.25rem;height:3.75rem}
+.mark{font-weight:800;font-size:1.35rem;text-decoration:none;font-variation-settings:"wdth" 62;letter-spacing:.01em}
+.mark b{color:var(--amber);font-weight:800}
+.nav ul{list-style:none;margin:0 0 0 auto;padding:0;display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none;font-size:.9rem;font-weight:600}
+.nav ul::-webkit-scrollbar{display:none}
+.nav ul.scrollable{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 2.2rem),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 2.2rem),transparent)}
+.nav ul.scrollable.at-end{-webkit-mask-image:none;mask-image:none}
+.nav ul a{position:relative;display:block;padding:.45rem .7rem;border-radius:999px;text-decoration:none;color:var(--muted);white-space:nowrap;transition:color .2s,background .2s}
+.nav ul a:hover{color:var(--ink)}
+.nav ul a.active{color:var(--amber-ink);background:var(--amber)}
+
+/* Hero */
+.hero{position:relative;padding:3.5rem 0 3.5rem;min-height:calc(88svh - 3.75rem);display:flex;flex-direction:column;justify-content:center}
+@media (min-width:60rem){.hero{padding:4rem 0 5rem}}
+.hero-grid{position:absolute;inset:0;z-index:-1;pointer-events:none;filter:hue-rotate(0);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:48px 48px;opacity:.35;
+  -webkit-mask-image:radial-gradient(ellipse 70% 60% at 30% 45%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 30% 45%,#000 10%,transparent 75%)}
+.spot{position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(420px circle at var(--mx,30%) var(--my,40%), rgba(229,56,59,.10), transparent 60%)}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.9rem;color:var(--muted);margin:0 0 1.5rem}
+.status i{width:.55rem;height:.55rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(229,56,59,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(229,56,59,.55)}70%{box-shadow:0 0 0 10px rgba(229,56,59,0)}100%{box-shadow:0 0 0 0 rgba(229,56,59,0)}}
+h1{margin:0;font-weight:800;line-height:.86;letter-spacing:-.01em;font-size:clamp(4.2rem,21vw,10.5rem);font-variation-settings:"wdth" 62}
+h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
+h1 .line span{display:block;transform:translateY(105%);animation:rise .9s var(--ease) forwards}
+h1 .line:nth-child(2) span{animation-delay:.12s}
+@keyframes rise{to{transform:none}}
+.role{margin:1.5rem 0 0;font-size:clamp(1.15rem,3.6vw,1.5rem);line-height:1.4;max-width:38ch;color:var(--muted)}
+.hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem 2rem;margin-top:2.25rem}
+.certs{display:flex;gap:.7rem;list-style:none;margin:0;padding:0}
+.certs a{display:block;width:4.25rem;transition:transform .25s var(--ease)}
+.certs a:hover{transform:translateY(-4px) rotate(-3deg)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;border:1px solid var(--line);transition:background .2s,border-color .2s,transform .2s}
+.btn:hover{border-color:var(--amber)}
+.btn.primary{background:var(--amber);color:var(--amber-ink);border-color:var(--amber)}
+.btn.primary:hover{transform:translateY(-2px)}
+.stats{display:flex;flex-wrap:wrap;gap:.5rem 2rem;margin:2.75rem 0 0;padding:0;list-style:none;color:var(--muted);font-size:.95rem}
+.stats b{display:block;color:var(--ink);font-size:2.2rem;line-height:1;font-weight:800;font-variation-settings:"wdth" 62;font-variant-numeric:tabular-nums}
+
+/* Sections */
+section{padding:4rem 0;border-top:1px solid var(--line)}
+@media (min-width:60rem){section{padding:5.5rem 0}}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.75rem;flex-wrap:wrap}
+h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);font-variation-settings:"wdth" 70;letter-spacing:-.005em}
+.sec-note{color:var(--muted);font-size:.95rem;margin:0}
+
+/* CVE rows with amber sweep */
+.cves{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.cves li{border-bottom:1px solid var(--line)}
+.cves a{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.15rem .5rem;text-decoration:none;isolation:isolate;overflow:hidden}
+.cves a::before{content:"";position:absolute;inset:0;background:var(--amber);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s var(--ease);z-index:-1}
+.cves a:hover::before,.cves a:focus-visible::before{transform:scaleX(1)}
+.cid{font-weight:800;line-height:1;font-size:clamp(2.1rem,10vw,4.4rem);font-variation-settings:"wdth" 62;font-variant-numeric:tabular-nums;transition:color .3s}
+.cid span{color:var(--muted);font-weight:500;transition:color .3s}
+.go{display:flex;align-items:center;gap:.5rem;font-size:.95rem;font-weight:600;color:var(--amber);white-space:nowrap;transition:color .3s}
+.go svg{width:1.3rem;height:1.3rem;transition:transform .35s var(--ease)}
+.cves a:hover .cid,.cves a:hover .cid span,.cves a:hover .go,
+.cves a:focus-visible .cid,.cves a:focus-visible .cid span,.cves a:focus-visible .go{color:var(--amber-ink)}
+.cves a:hover .go svg{transform:translate(3px,-3px)}
+@media (max-width:30rem){.go .txt{display:none}}
+
+/* Recognition chips */
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.chips a{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.95rem;background:var(--bg2);transition:border-color .2s,background .2s,transform .2s}
+.chips a:hover{border-color:var(--amber);background:var(--bg3);transform:translateY(-2px)}
+.chips .tag{font-size:.72rem;font-weight:700;color:var(--amber)}
+.featured{margin-bottom:.9rem}
+.featured a{font-size:1.15rem;font-weight:700;padding:.85rem 1.3rem;font-variation-settings:"wdth" 85}
+
+/* Competitions */
+.comps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media (min-width:48rem){.comps{grid-template-columns:repeat(4,1fr)}}
+.comps a{position:relative;display:block;height:100%;padding:1.3rem 1.2rem 1.15rem;border:1px solid var(--line);border-radius:18px;background:var(--bg2);text-decoration:none;overflow:hidden;transition:border-color .2s,transform .25s var(--ease)}
+.comps a:hover{border-color:var(--amber);transform:translateY(-3px)}
+.rank{display:block;font-weight:800;line-height:.9;font-size:clamp(3rem,13vw,4.4rem);color:var(--amber);font-variation-settings:"wdth" 62;font-variant-numeric:tabular-nums}
+.rank sup{font-size:.35em;font-weight:600;vertical-align:1.3em;margin-left:.05em;color:var(--muted)}
+.cname{display:block;margin-top:.8rem;font-weight:700;line-height:1.25}
+.corg{display:block;font-size:.85rem;color:var(--muted)}
+
+/* Project */
+.project{position:relative;display:grid;gap:1rem;padding:1.6rem;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,var(--bg2),#220d0e);text-decoration:none;overflow:hidden;transition:border-color .2s}
+@media (min-width:48rem){.project{grid-template-columns:1fr auto;align-items:end;padding:2.2rem}}
+.project:hover{border-color:var(--amber)}
+.project h3{margin:0;font-weight:800;font-size:clamp(2rem,7vw,3rem);line-height:1;font-variation-settings:"wdth" 70}
+.project p{margin:.6rem 0 0;color:var(--muted);max-width:52ch}
+.project .gh{font-weight:700;color:var(--amber);white-space:nowrap}
+
+/* Contact */
+.contact-lede{color:var(--muted);margin:0 0 1.5rem;max-width:50ch}
+.socials{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
+@media (min-width:48rem){.socials{grid-template-columns:repeat(3,1fr)}}
+.socials a{display:flex;flex-direction:column;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:16px;text-decoration:none;font-weight:700;background:var(--bg2);transition:border-color .2s,transform .2s}
+.socials a:hover{border-color:var(--amber);transform:translateY(-2px)}
+.socials small{color:var(--muted);font-weight:500;font-size:.85rem;overflow-wrap:anywhere}
+
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:2rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
+footer a{color:var(--muted)}
+
+/* Reveal on scroll (only when JS runs) */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  h1 .line span{transform:none}
+  .js .reveal{opacity:1;transform:none}
+  .progress{display:none}
+}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="hero" style="text-align:center;">
-        <h1 class="title">Ahmet Artuç</h1>
-        <p class="subtitle">Offensive Security Professional & Security Researcher</p>
+<div class="progress" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Sections"><div class="wrap">
+  <a class="mark" href="#top">A<b>.</b>A</a>
+  <ul>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#recognition">Recognition</a></li>
+    <li><a href="#competitions">Competitions</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<main id="top" class="wrap">
+  <header class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="spot" aria-hidden="true"></div>
+    <h1><span class="line"><span>Ahmet</span></span><span class="line"><span>Artuç</span></span></h1>
+    <div class="hero-row">
+      <ul class="certs" aria-label="Certifications">
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.credential.net/648e2de7-553c-44e0-9660-3fd3d7b7b051" title="OffSec Certified Professional (OSCP)"><img src="https://www.offsec.com/_astro/PEN-200.DIVSGwj5.svg" alt="OSCP badge" width="68" height="68"></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://credentials.offsec.com/b3072c06-7c2a-4ccd-883e-944879df1049" title="OffSec Web Expert (OSWE)"><img src="https://www.offsec.com/_astro/WEB-300.BI4aCyuN.svg" alt="OSWE badge" width="68" height="68"></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.credential.net/60b784e9-2236-469f-ab3d-0c408a0a085d" title="OffSec Wireless Professional (OSWP)"><img src="https://www.offsec.com/_astro/PEN-210.Dc44SN_S.svg" alt="OSWP badge" width="68" height="68"></a></li>
+      </ul>
+      <div class="btns">
+        <a class="btn primary" href="#research">See my CVEs</a>
+        <a class="btn" href="#contact">Get in touch</a>
       </div>
     </div>
+    <ul class="stats">
+      <li><b data-count="4">4</b>published CVEs</li>
+      <li><b data-count="12">12</b>acknowledgements</li>
+      <li><b data-count="3">3</b>OffSec certifications</li>
+    </ul>
   </header>
 
-<main class="site-main">
-  <div class="container">
-    <section class="section" id="certifications">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="badge-row">
-
-            <a class="badge-link" 
-               href="https://www.credential.net/648e2de7-553c-44e0-9660-3fd3d7b7b051" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="OffSec Certified Professional Certification Badge">
-              <img class="badge" 
-                   src="https://www.offsec.com/_astro/PEN-200.DIVSGwj5.svg" 
-                   alt="OffSec Certified Professional (OSCP)"
-                   loading="lazy"
-                   width="100"
-                   height="100" />
-            </a>
-
-            <a class="badge-link" 
-               href="https://www.credential.net/60b784e9-2236-469f-ab3d-0c408a0a085d" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="OffSec Wireless Professional Certification Badge">
-              <img class="badge" 
-                   src="https://www.offsec.com/_astro/PEN-210.Dc44SN_S.svg" 
-                   alt="OffSec Wireless Professional (OSWP)"
-                   loading="lazy"
-                   width="100"
-                   height="100" />
-            </a>
-
-            <a class="badge-link" 
-               href="https://credentials.offsec.com/b3072c06-7c2a-4ccd-883e-944879df1049" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               aria-label="OffSec Web Expert Certification Badge">
-              <img class="badge" 
-                   src="https://www.offsec.com/_astro/WEB-300.BI4aCyuN.svg" 
-                   alt="OffSec Web Expert (OSWE)"
-                   loading="lazy"
-                   width="100"
-                   height="100" />
-            </a>
-
-          </div>
-        </div>
-      </div>
-    </section>
-      
-      <section class="section" id="research">
-        <h2 class="section-title">Vulnerability Research</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="kv">
-              <div class="kv-left">
-                <span class="link-strong">CVE-2025-61035</span>
-              </div>
-              <div class="kv-right">
-                <a class="button" href="/research/cve-2025-61035.html">Read</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="kv">
-              <div class="kv-left">
-                <span class="link-strong">CVE-2025-12543</span>
-              </div>
-              <div class="kv-right">
-                <a class="button" href="/research/cve-2025-12543.html">Read</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="kv">
-              <div class="kv-left">
-                <span class="link-strong">CVE-2025-69219</span>
-              </div>
-              <div class="kv-right">
-                <a class="button" href="/research/cve-2025-69219.html">Read</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="kv">
-              <div class="kv-left">
-                <span class="link-strong">CVE-2026-24737</span>
-              </div>
-              <div class="kv-right">
-                <a class="button" href="/research/cve-2026-24737.html">Read</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="recognition">
-        <h2 class="section-title">Recognition</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="list">
-
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://msrc.microsoft.com/update-guide/acknowledgement/online" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    MSRC Acknowledgement
-                  </a>
-                </div>
-              </div>
-
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://www.hs-bremen.de/en/security/hall-of-fame" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    HSB Hochschule Bremen Hall of Fame
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    WHO Vulnerability Hall of Fame
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://www.unistra.fr/.well-known/hall-of-fame.txt" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Université de Strasbourg Hall of Fame
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://www.uni-muenster.de/CERT/en/incidents/acknowledgments.html" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Universität Münster Acknowledgements
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="https://www.uni-due.de/ciso/hall-of-fame.php" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Universität Duisburg-Essen Hall of Fame
-                  </a>
-                </div>
-              </div>
-                
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="/assets/pdf/letters/kitedu.pdf" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Karlsruhe Institute of Technology – Letters of Appreciation
-                  </a>
-                </div>
-              </div>
-
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="/assets/pdf/letters/rub.pdf" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Ruhr University Bochum – Letters of Appreciation
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="/assets/pdf/letters/marburguniversity.pdf" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Philipps-Universität Marburg – Letters of Appreciation
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="/assets/pdf/letters/leidenuniversity.pdf" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Leiden University – Letters of Appreciation
-                  </a>
-                </div>
-              </div>
-              
-              <div class="list-item">
-                <div class="list-title">
-                  <a href="/assets/pdf/letters/maastrichtuniversity.pdf" 
-                     target="_blank" 
-                     rel="noopener noreferrer">
-                    Maastricht University – Letters of Appreciation
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<section class="section" id="competitions">
-  <h2 class="section-title">Competitions</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-            <a href="/assets/competitions/echo-response.png" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              OffSec – Echo Response
-            </a>
-          </div>
-          <div class="list-desc">Rank: 32nd</div>
-        </div>
-      </div>
+  <section id="research">
+    <div class="sec-head reveal">
+      <h2>Vulnerability research</h2>
     </div>
+    <ul class="cves reveal">
+      <li><a href="/research/cve-2026-24737.html"><span class="cid"><span>CVE-</span>2026-24737</span><span class="go"><span class="txt">Read</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+      <li><a href="/research/cve-2025-69219.html"><span class="cid"><span>CVE-</span>2025-69219</span><span class="go"><span class="txt">Read</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+      <li><a href="/research/cve-2025-61035.html"><span class="cid"><span>CVE-</span>2025-61035</span><span class="go"><span class="txt">Read</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+      <li><a href="/research/cve-2025-12543.html"><span class="cid"><span>CVE-</span>2025-12543</span><span class="go"><span class="txt">Read</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></li>
+    </ul>
+  </section>
 
-    <div class="card">
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-            <a href="/assets/competitions/arctic-howl.png" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              OffSec – Arctic Howl
-            </a>
-          </div>
-          <div class="list-desc">Rank: 76th</div>
-        </div>
+  <section id="recognition">
+    <div class="sec-head reveal">
+      <h2>Recognition</h2>
+    </div>
+    <div class="reveal">
+      <ul class="chips featured">
+        <li><a target="_blank" rel="noopener noreferrer" href="https://support.apple.com/en-us/102774">Apple</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://msrc.microsoft.com/update-guide/acknowledgement/online">Microsoft MSRC</a></li>
+      </ul>
+      <ul class="chips">
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list">World Health Organization</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.hs-bremen.de/en/security/hall-of-fame">Hochschule Bremen</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.unistra.fr/.well-known/hall-of-fame.txt">Université de Strasbourg</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-muenster.de/CERT/en/incidents/acknowledgments.html">Universität Münster</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-due.de/ciso/hall-of-fame.php">Universität Duisburg-Essen</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/kitedu.pdf">Karlsruhe Institute of Technology <span class="tag">Letter</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/rub.pdf">Ruhr University Bochum <span class="tag">Letter</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/marburguniversity.pdf">Philipps-Universität Marburg <span class="tag">Letter</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/leidenuniversity.pdf">Leiden University <span class="tag">Letter</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/maastrichtuniversity.pdf">Maastricht University <span class="tag">Letter</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="competitions">
+    <div class="sec-head reveal">
+      <h2>Competitions</h2>
+    </div>
+    <ul class="comps reveal">
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/dune-phantom.png"><span class="rank">21<sup>st</sup></span><span class="cname">Dune Phantom</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/echo-response.png"><span class="rank">32<sup>nd</sup></span><span class="cname">Echo Response</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/vaultfall.png"><span class="rank">52<sup>nd</sup></span><span class="cname">Vaultfall</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/arctic-howl.png"><span class="rank">76<sup>th</sup></span><span class="cname">Arctic Howl</span><span class="corg">OffSec</span></a></li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head reveal"><h2>Projects</h2></div>
+    <a class="project reveal" target="_blank" rel="noopener noreferrer" href="https://github.com/ahmetartuc/dighub">
+      <div>
+        <h3>DigHub</h3>
+        <p>Advanced GitHub dorking to find exposed secrets, credentials, webhooks and sensitive files in public repositories.</p>
       </div>
-    </div>
+      <span class="gh">View on GitHub</span>
+    </a>
+  </section>
 
-    <div class="card">
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-            <a href="/assets/competitions/dune-phantom.png" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              OffSec – Dune Phantom
-            </a>
-          </div>
-          <div class="list-desc">Rank: 21st</div>
-        </div>
-      </div>
-    </div>
+  <section id="contact">
+    <div class="sec-head reveal"><h2>Contact</h2></div>
+    <ul class="socials reveal">
+      <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ahmetartuc/">LinkedIn<small>ahmetartuc</small></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://x.com/ahmetaartuc">X<small>@ahmetaartuc</small></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/ahmetartuc">GitHub<small>ahmetartuc</small></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://hackerone.com/ahmetartuc1">HackerOne<small>ahmetartuc1</small></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://bugcrowd.com/h/ahmetartuc">Bugcrowd<small>ahmetartuc</small></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://app.intigriti.com/profile/arts3c">Intigriti<small>arts3c</small></a></li>
+    </ul>
+  </section>
 
-    <div class="card">
-      <div class="list">
-        <div class="list-item">
-          <div class="list-title">
-            <a href="/assets/competitions/vaultfall.png" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              OffSec – Vaultfall
-            </a>
-          </div>
-          <div class="list-desc">Rank: 52nd</div>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</section>      
-      <section class="section" id="projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="kv">
-              <div class="kv-left">
-                <a href="https://github.com/ahmetartuc/dighub" 
-                   target="_blank" 
-                   rel="noopener noreferrer">
-                  <span class="link-strong">DigHub</span>
-                </a>
-                <div class="muted">Performs advanced GitHub dorking to detect exposed secrets, credentials, webhooks, and sensitive files inside public repositories.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="cards">
-          <div class="card">
-            <div class="social-grid">
-              <a class="social" 
-                 href="https://www.linkedin.com/in/ahmetartuc/" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="LinkedIn">
-                <img class="social-icon" 
-                     src="/assets/images/social/linkedin.png" 
-                     alt="LinkedIn"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">LinkedIn</span>
-              </a>
-              
-              <a class="social" 
-                 href="https://x.com/ahmetaartuc" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="X">
-                <img class="social-icon" 
-                     src="/assets/images/social/x.png" 
-                     alt="X"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">X</span>
-              </a>
-              
-              <a class="social" 
-                 href="https://github.com/ahmetartuc" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="GitHub">
-                <img class="social-icon" 
-                     src="/assets/images/social/github.png" 
-                     alt="GitHub"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">GitHub</span>
-              </a>
-              
-              <a class="social" 
-                 href="https://bugcrowd.com/h/ahmetartuc" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="Bugcrowd">
-                <img class="social-icon" 
-                     src="/assets/images/social/bugcrowd.png" 
-                     alt="Bugcrowd"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">Bugcrowd</span>
-              </a>
-              
-              <a class="social" 
-                 href="https://hackerone.com/ahmetartuc1" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="HackerOne">
-                <img class="social-icon" 
-                     src="/assets/images/social/hackerone.png" 
-                     alt="HackerOne"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">HackerOne</span>
-              </a>
-              
-              <a class="social" 
-                 href="https://app.intigriti.com/profile/arts3c" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 aria-label="Intigriti">
-                <img class="social-icon" 
-                     src="/assets/images/social/intigriti.png" 
-                     alt="Intigriti"
-                     loading="lazy"
-                     width="26"
-                     height="26" />
-                <span class="social-label">Intigriti</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-row">
-        <div class="muted">© <span id="y"></span> Ahmet Artuç</div>
-        <div class="muted">All rights reserved</div>
-        <a class="link" href="#certifications">Back to top</a>
-      </div>
-    </div>
+  <footer>
+    <span>© <span id="yr">2026</span> Ahmet Artuç</span>
+    <a href="#top">Back to top</a>
   </footer>
+</main>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js');
+
+  // Telif yili
+  var yr=document.getElementById('yr');
+  if(yr) yr.textContent=new Date().getFullYear();
+
+  // Scroll progress + nav border
+  var bar=document.querySelector('.progress'), nav=document.querySelector('.nav');
+  function onScroll(){
+    var h=document.documentElement.scrollHeight-innerHeight;
+    bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';
+    nav.classList.toggle('scrolled',scrollY>8);
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Reveal on scroll
+  var items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){io.observe(el)});
+  } else items.forEach(function(el){el.classList.add('in')});
+  // Emniyet: IntersectionObserver tetiklenmezse (on-render eden botlar, gizli sekme)
+  // icerik kalici olarak gorunmez kalmasin.
+  setTimeout(function(){items.forEach(function(el){el.classList.add('in')})},1500);
+
+  // Scroll-spy
+  var links={};document.querySelectorAll('.nav ul a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active')});
+        var l=links[e.target.id];
+        if(l){l.classList.add('active');
+          var ul=l.parentNode.parentNode, lr=l.getBoundingClientRect(), ur=ul.getBoundingClientRect();
+          ul.scrollLeft += (lr.left-ur.left) - (ur.width-lr.width)/2;}}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section').forEach(function(s){spy.observe(s)});
+  }
+
+  // Nav yatay kaydirilabilir mi? Kenar solmasini ona gore goster.
+  var navUl=document.querySelector('.nav ul');
+  function navEdge(){
+    if(!navUl) return;
+    var over = navUl.scrollWidth - navUl.clientWidth;
+    navUl.classList.toggle('scrollable', over > 2);
+    navUl.classList.toggle('at-end', navUl.scrollLeft >= over - 2);
+  }
+  if(navUl){
+    navEdge();
+    navUl.addEventListener('scroll',navEdge,{passive:true});
+    addEventListener('resize',navEdge,{passive:true});
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(navEdge);
+  }
+
+  // Cursor spotlight in hero (pointer devices only)
+  var hero=document.querySelector('.hero'), spot=document.querySelector('.spot');
+  if(matchMedia('(pointer:fine)').matches && !reduce){
+    hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();
+      spot.style.setProperty('--mx',(e.clientX-r.left)+'px');spot.style.setProperty('--my',(e.clientY-r.top)+'px')});
+  }
+
+
+  // Count-up stats
+  if(!reduce){
+    document.querySelectorAll('[data-count]').forEach(function(b){
+      var n=+b.dataset.count,t0=null,done=false;
+      function step(t){if(!t0){t0=t;b.textContent='0';}var p=Math.min((t-t0)/1100,1);b.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);else done=true}
+      setTimeout(function(){requestAnimationFrame(step)},500);
+      // Emniyet: animasyon yarida kalirsa rakam dogru degerde bitsin.
+      setTimeout(function(){if(!done)b.textContent=n},2600);
+    });
+  }
+})();
+</script>
 </body>
 </html>
