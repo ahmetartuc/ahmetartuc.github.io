@@ -82,15 +82,11 @@ img{max-width:100%;display:block}
   -webkit-mask-image:radial-gradient(ellipse 70% 60% at 30% 45%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 30% 45%,#000 10%,transparent 75%)}
 .spot{position:absolute;inset:0;z-index:-1;pointer-events:none;
   background:radial-gradient(420px circle at var(--mx,30%) var(--my,40%), rgba(229,56,59,.10), transparent 60%)}
-.status{display:inline-flex;align-items:center;gap:.55rem;font-size:.9rem;color:var(--muted);margin:0 0 1.5rem}
-.status i{width:.55rem;height:.55rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(229,56,59,.6);animation:pulse 2.4s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(229,56,59,.55)}70%{box-shadow:0 0 0 10px rgba(229,56,59,0)}100%{box-shadow:0 0 0 0 rgba(229,56,59,0)}}
 h1{margin:0;font-weight:800;line-height:.86;letter-spacing:-.01em;font-size:clamp(4.2rem,21vw,10.5rem);font-variation-settings:"wdth" 62}
 h1 .line{display:block;overflow:hidden;padding-bottom:.04em}
 h1 .line span{display:block;transform:translateY(105%);animation:rise .9s var(--ease) forwards}
 h1 .line:nth-child(2) span{animation-delay:.12s}
 @keyframes rise{to{transform:none}}
-.role{margin:1.5rem 0 0;font-size:clamp(1.15rem,3.6vw,1.5rem);line-height:1.4;max-width:38ch;color:var(--muted)}
 .hero-row{display:flex;flex-wrap:wrap;align-items:center;gap:1.25rem 2rem;margin-top:2.25rem}
 .certs{display:flex;gap:.7rem;list-style:none;margin:0;padding:0}
 .certs a{display:block;width:4.25rem;transition:transform .25s var(--ease)}
@@ -108,7 +104,6 @@ section{padding:4rem 0;border-top:1px solid var(--line)}
 @media (min-width:60rem){section{padding:5.5rem 0}}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.75rem;flex-wrap:wrap}
 h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);font-variation-settings:"wdth" 70;letter-spacing:-.005em}
-.sec-note{color:var(--muted);font-size:.95rem;margin:0}
 
 /* CVE rows with amber sweep */
 .cves{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
@@ -130,6 +125,7 @@ h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);fon
 .chips a{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.95rem;background:var(--bg2);transition:border-color .2s,background .2s,transform .2s}
 .chips a:hover{border-color:var(--amber);background:var(--bg3);transform:translateY(-2px)}
 .chips .tag{font-size:.72rem;font-weight:700;color:var(--amber)}
+.chips .when{font-size:.72rem;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;opacity:.85}
 .featured{margin-bottom:.9rem}
 .featured a{font-size:1.15rem;font-weight:700;padding:.85rem 1.3rem;font-variation-settings:"wdth" 85}
 
@@ -152,7 +148,6 @@ h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);fon
 .project .gh{font-weight:700;color:var(--amber);white-space:nowrap}
 
 /* Contact */
-.contact-lede{color:var(--muted);margin:0 0 1.5rem;max-width:50ch}
 .socials{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.65rem}
 @media (min-width:48rem){.socials{grid-template-columns:repeat(3,1fr)}}
 .socials a{display:flex;flex-direction:column;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:16px;text-decoration:none;font-weight:700;background:var(--bg2);transition:border-color .2s,transform .2s}
@@ -230,20 +225,20 @@ footer a{color:var(--muted)}
     </div>
     <div class="reveal">
       <ul class="chips featured">
-        <li><a target="_blank" rel="noopener noreferrer" href="https://support.apple.com/en-us/102774">Apple</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://msrc.microsoft.com/update-guide/acknowledgement/online">Microsoft MSRC</a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://support.apple.com/en-us/102774">Apple <span class="when">Aug 2026</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://msrc.microsoft.com/update-guide/acknowledgement/online">Microsoft MSRC <span class="when">Feb 2026</span></a></li>
       </ul>
       <ul class="chips">
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list">World Health Organization</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.hs-bremen.de/en/security/hall-of-fame">Hochschule Bremen</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.unistra.fr/.well-known/hall-of-fame.txt">Université de Strasbourg</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-muenster.de/CERT/en/incidents/acknowledgments.html">Universität Münster</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-due.de/ciso/hall-of-fame.php">Universität Duisburg-Essen</a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/kitedu.pdf">Karlsruhe Institute of Technology <span class="tag">Letter</span></a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/rub.pdf">Ruhr University Bochum <span class="tag">Letter</span></a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/marburguniversity.pdf">Philipps-Universität Marburg <span class="tag">Letter</span></a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/leidenuniversity.pdf">Leiden University <span class="tag">Letter</span></a></li>
-        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/maastrichtuniversity.pdf">Maastricht University <span class="tag">Letter</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.hs-bremen.de/en/security/hall-of-fame">Hochschule Bremen <span class="when">2026</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/kitedu.pdf">Karlsruhe Institute of Technology <span class="tag">Letter</span> <span class="when">Feb 2026</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/leidenuniversity.pdf">Leiden University <span class="tag">Letter</span> <span class="when">Dec 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/marburguniversity.pdf">Philipps-Universität Marburg <span class="tag">Letter</span> <span class="when">Dec 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/rub.pdf">Ruhr University Bochum <span class="tag">Letter</span> <span class="when">Nov 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="/assets/pdf/letters/maastrichtuniversity.pdf">Maastricht University <span class="tag">Letter</span> <span class="when">Nov 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-due.de/ciso/hall-of-fame.php">Universität Duisburg-Essen <span class="when">Nov 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.uni-muenster.de/CERT/en/incidents/acknowledgments.html">Universität Münster <span class="when">Oct 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.unistra.fr/.well-known/hall-of-fame.txt">Université de Strasbourg <span class="when">Oct 2025</span></a></li>
+        <li><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/about/cybersecurity/vulnerability-hall-of-fame/ethical-hacker-list">World Health Organization <span class="when">Sep 2025</span></a></li>
       </ul>
     </div>
   </section>
@@ -253,10 +248,10 @@ footer a{color:var(--muted)}
       <h2>Competitions</h2>
     </div>
     <ul class="comps reveal">
-      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/dune-phantom.png"><span class="rank">21<sup>st</sup></span><span class="cname">Dune Phantom</span><span class="corg">OffSec</span></a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/echo-response.png"><span class="rank">32<sup>nd</sup></span><span class="cname">Echo Response</span><span class="corg">OffSec</span></a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/vaultfall.png"><span class="rank">52<sup>nd</sup></span><span class="cname">Vaultfall</span><span class="corg">OffSec</span></a></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/arctic-howl.png"><span class="rank">76<sup>th</sup></span><span class="cname">Arctic Howl</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/dune-phantom.webp"><span class="rank">21<sup>st</sup></span><span class="cname">Dune Phantom</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/echo-response.webp"><span class="rank">32<sup>nd</sup></span><span class="cname">Echo Response</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/vaultfall.webp"><span class="rank">52<sup>nd</sup></span><span class="cname">Vaultfall</span><span class="corg">OffSec</span></a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="/assets/competitions/arctic-howl.webp"><span class="rank">76<sup>th</sup></span><span class="cname">Arctic Howl</span><span class="corg">OffSec</span></a></li>
     </ul>
   </section>
 
