@@ -155,7 +155,10 @@ h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);fon
 .socials a:hover{border-color:var(--amber);transform:translateY(-2px)}
 .socials small{color:var(--muted);font-weight:500;font-size:.85rem;overflow-wrap:anywhere}
 
-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:2rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
+footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:2rem 0 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.875rem}
+.totop{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border:1px solid var(--line);border-radius:999px;color:var(--muted);flex:0 0 auto;transition:border-color .2s,color .2s,transform .2s}
+.totop:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+.totop svg{width:1.15rem;height:1.15rem;display:block}
 footer a{color:var(--muted)}
 
 /* Reveal on scroll (only when JS runs) */
@@ -281,7 +284,7 @@ footer a{color:var(--muted)}
 
   <footer>
     <span>© <span id="yr">2026</span> Ahmet Artuç</span>
-    <a href="#top">Back to top</a>
+    <a class="totop" href="#top" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></a>
   </footer>
 </main>
 
