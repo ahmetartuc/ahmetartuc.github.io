@@ -134,6 +134,7 @@ h2{margin:0;font-weight:800;line-height:1;font-size:clamp(2.2rem,8vw,3.6rem);fon
 .cname{display:block;margin-top:.8rem;font-weight:700;line-height:1.25}
 .corg{display:block;font-size:.85rem;color:var(--muted)}
 
+.projects{display:grid;gap:.75rem}
 .project{position:relative;display:grid;gap:1rem;padding:1.6rem;border:1px solid var(--line);border-radius:22px;background:linear-gradient(135deg,var(--bg2),#220d0e);text-decoration:none;overflow:hidden;transition:border-color .2s}
 @media (min-width:48rem){.project{grid-template-columns:1fr auto;align-items:end;padding:2.2rem}}
 .project:hover{border-color:var(--amber)}
@@ -253,13 +254,22 @@ footer a{color:var(--muted)}
 
   <section id="projects">
     <div class="sec-head reveal"><h2>Projects</h2></div>
-    <a class="project reveal" target="_blank" rel="noopener noreferrer" href="https://github.com/ahmetartuc/dighub">
+    <div class="projects reveal">
+    <a class="project" target="_blank" rel="noopener noreferrer" href="https://github.com/ahmetartuc/adx">
+      <div>
+        <h3>adX</h3>
+        <p>Database-free Active Directory attack-path tool. A SharpHound-compatible LDAP collector and an in-memory GUI that shows the shortest path to Domain Admin, with copy-paste exploit commands.</p>
+      </div>
+      <span class="gh">View on GitHub</span>
+    </a>
+    <a class="project" target="_blank" rel="noopener noreferrer" href="https://github.com/ahmetartuc/dighub">
       <div>
         <h3>DigHub</h3>
         <p>Advanced GitHub dorking to find exposed secrets, credentials, webhooks and sensitive files in public repositories.</p>
       </div>
       <span class="gh">View on GitHub</span>
     </a>
+    </div>
   </section>
 
 <section id="contact">
