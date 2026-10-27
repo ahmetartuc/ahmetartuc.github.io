@@ -20,15 +20,32 @@
    padding:3rem 0 4rem}
 .e-code{margin:0;font-weight:800;line-height:.82;letter-spacing:-.02em;color:var(--amber);
    font-size:clamp(6rem,30vw,14rem);font-variation-settings:"wdth" 62;font-variant-numeric:tabular-nums}
-.e-msg{margin:1.25rem 0 0;font-weight:800;line-height:1.05;
-   font-size:clamp(1.9rem,7vw,3.2rem);font-variation-settings:"wdth" 70}
-.e-sub{margin:1rem 0 0;color:var(--muted);max-width:42ch;font-size:clamp(1rem,2.6vw,1.15rem)}
-.e-btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.25rem}
-.e-btns a{display:inline-block;padding:.8rem 1.3rem;border-radius:999px;font-weight:700;
-   text-decoration:none;border:1px solid var(--line);transition:border-color .2s,transform .2s}
-.e-btns a:hover{border-color:var(--amber)}
-.e-btns a.primary{background:var(--amber);color:var(--amber-ink);border-color:var(--amber)}
-.e-btns a.primary:hover{transform:translateY(-2px)}
+.e-code{animation:glitch .5s steps(2) .2s 2}
+.e-code:hover{animation:glitch .4s steps(2) infinite}
+@keyframes glitch{
+  0%{text-shadow:none;transform:none}
+  25%{text-shadow:-.04em 0 var(--ink),.04em 0 #7a1c1e;transform:translateX(-.02em) skewX(-6deg)}
+  50%{text-shadow:.05em 0 var(--ink),-.03em 0 #7a1c1e;transform:translateX(.02em)}
+  75%{text-shadow:-.02em 0 var(--ink);transform:skewX(4deg)}
+  100%{text-shadow:none;transform:none}}
+.e-msg{margin:.6rem 0 0;font-weight:800;line-height:1;letter-spacing:-.02em;
+   font-size:clamp(2.6rem,11vw,5rem);font-variation-settings:"wdth" 125}
+.e-msg span{display:inline-block;opacity:0;transform:translateY(-.7em) rotate(-12deg);
+   animation:drop .6s cubic-bezier(.3,1.6,.5,1) forwards;animation-delay:calc(.5s + var(--i) * .07s)}
+.e-msg span:last-child{color:var(--amber)}
+@keyframes drop{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){
+  .e-code,.e-code:hover{animation:none}
+  .e-msg span{animation:none;opacity:1;transform:none}
+  .e-home,.e-home svg{transition:none}
+}
+.e-home{display:inline-flex;align-items:center;gap:.6rem;align-self:flex-start;margin-top:2.25rem;
+   padding:.9rem 1.6rem .9rem 1.2rem;border-radius:999px;background:var(--amber);color:var(--amber-ink);
+   font-weight:700;font-size:1.05rem;text-decoration:none;
+   box-shadow:0 0 0 0 rgba(229,56,59,.45);transition:transform .25s var(--ease),box-shadow .3s var(--ease)}
+.e-home svg{width:1.2rem;height:1.2rem;transition:transform .3s var(--ease)}
+.e-home:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(229,56,59,.55)}
+.e-home:hover svg{transform:translateX(-4px)}
 </style>
 </head>
 <body>
@@ -46,13 +63,8 @@
 <main class="wrap">
   <div class="e">
     <p class="e-code">404</p>
-    <h1 class="e-msg">Page not found</h1>
-    <p class="e-sub">This page doesn't exist, or it moved. The research write-ups are all linked from the home page.</p>
-    <div class="e-btns">
-      <a class="primary" href="/">Home</a>
-      <a href="/#research">Research</a>
-      <a href="/#contact">Contact</a>
-    </div>
+    <h1 class="e-msg" aria-label="Oopsss."><span style="--i:0" aria-hidden="true">O</span><span style="--i:1" aria-hidden="true">o</span><span style="--i:2" aria-hidden="true">p</span><span style="--i:3" aria-hidden="true">s</span><span style="--i:4" aria-hidden="true">s</span><span style="--i:5" aria-hidden="true">s</span><span style="--i:6" aria-hidden="true">.</span></h1>
+    <a class="e-home" href="/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>Back home</a>
   </div>
 
   <footer>
